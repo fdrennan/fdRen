@@ -954,3 +954,21 @@ curve(rf+x*max((erp-rf)/stdev), add = TRUE)
 }
 
 
+#' sampler
+#' @description
+#' Splits data into test/train dataset
+#' @examples
+#' testTrain <- sampler(iris, .9)
+#' testTrain$test
+#' testTrain$train
+#' @export
+
+sampler <- function(theData, proportion = "proportation like .9") {
+  samplesTrain <- sample(1:nrow(theData), size  = trunc(nrow(theData)*proportion), replace = FALSE)
+  train <- theData[samplesTrain,]
+  test <- theData[-samplesTrain,]
+  returnList <- list()
+  returnList[["train"]] <- train
+  returnList[["test"]] <- test
+  returnList
+}
