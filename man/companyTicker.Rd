@@ -4,7 +4,7 @@
 \alias{companyTicker}
 \title{companyTicker}
 \usage{
-companyTicker(query)
+companyTicker(query, first = FALSE)
 }
 \description{
 Searches marketwatch.com to find a ticker given a query

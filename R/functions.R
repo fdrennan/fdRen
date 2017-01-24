@@ -983,7 +983,7 @@ sampler <- function(theData, proportion = "proportation like .9") {
 
 companyTicker <- function(query, first = FALSE) {
     lookup <-  paste0("http://www.marketwatch.com/tools/quotes/lookup.asp?siteID=mktw&Lookup=", query, "&Country=us&Type=All")
-    if (first = FALSE) {
+    if (first == FALSE) {
       urlTables(lookup)[[1]]
     } else {
       urlTables(lookup)[[1]][1,1]
