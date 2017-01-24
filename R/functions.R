@@ -1030,9 +1030,9 @@ addHashtags <- function(tweetDF) {
   if(!packageLoaded("stringr")) {
     library(stringr)
   }
-     tweetDF$hastags <- str_extract_all(tweetDF$text, "#[:graph:]+ ")
-     tweetDF$hastags <- str_replace_all(tweetDF$hastags, "[:punct:]", "")
-     tweetDF$hastags <- tolower(tweetDF$hastags)
-     tweetDF$hastags <- ifelse(tweetDF$hastags == "character0", NA, tweetDF$hastags)
+     tweetDF$hashtags <- str_extract_all(tweetDF$text, "#[:graph:]+ ")
+     tweetDF$hashtags <- str_replace_all(tweetDF$hashtags, "[:punct:]", "")
+     tweetDF$hashtags <- tolower(tweetDF$hashtags)
+     tweetDF$hashtags <- ifelse(tweetDF$hashtags == "character0", NA, tweetDF$hashtags)
      tweetDF
 }
