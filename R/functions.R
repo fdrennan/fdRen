@@ -993,3 +993,28 @@ companyTicker <- function(query, first = FALSE) {
     }
 
 }
+
+#' twitteR_usage
+#' @description
+#' Gives current usage when using twitteR package.
+#' @examples
+#' twitteR_usage()
+#' @export
+
+twitteR_usage <- function() {
+     if(!packageLoaded("dplyr")) {
+          library(dplyr)
+     }
+     if(!packageLoaded("twitteR")) {
+          library(twitteR)
+     }
+     library(dplyr)
+limit_info <- getCurRateLimitInfo()
+# limit_info <- select(limit_info, resource, limit, remaining, everything())
+limit_info$limit <- as.integer(limit_info$limit)
+limit_info$remaining <- as.integer(limit_info$remaining)
+limit_info <- mutate(limit_info, prop = remaining / limit)
+limit_info <- select(limit_info, resource, prop)
+limit_info <- arrange(limit_info, prop)
+limit_info
+}
