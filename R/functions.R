@@ -1034,7 +1034,7 @@ addHashtags <- function(tweetDF) {
      tweetDF$hashtags <- str_replace_all(tweetDF$hashtags, "[:punct:]", "")
      tweetDF$hashtags <- tolower(tweetDF$hashtags)
      tweetDF$hashtags <- ifelse(tweetDF$hashtags == "character0", NA, tweetDF$hashtags)
-     tweets$hashtags <- sub("", "", tweets$hashtags)
-     tweets$hashtags <- str_split(tweets$hashtags, " ")
+     tweetDF$hashtags <- sub("", "", tweetDF$hashtags)
+     tweetDF$hashtags <- str_split(tweetDF$hashtags, " ")
      tweetDF
 }
