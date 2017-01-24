@@ -175,6 +175,9 @@ curve_fitter <- function(dataFrame = "dataframe", expr="", columns = "c(x, y)") 
 #' # starTable[[3]]
 #' @export
 urlTables <- function(url,...) {
+  if(!packageLoaded("rvest")) {
+    try(library(rvest))
+  }
   if(is.element("rvest", installed.packages()) && packageLoaded("rvest")) {
     website <- read_html(url)
     website %>%
