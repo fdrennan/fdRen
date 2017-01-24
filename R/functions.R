@@ -1027,6 +1027,9 @@ limit_info
 #' @export
 
 addHashtags <- function(tweetDF) {
+  if(!packageLoaded("stringr")) {
+    library(stringr)
+  }
      tweetDF$hastags <- str_extract_all(tweetDF$text, "#[:graph:]+ ")
      tweetDF$hastags <- str_replace_all(tweetDF$hastags, "[:punct:]", "")
      tweetDF$hastags <- tolower(tweetDF$hastags)

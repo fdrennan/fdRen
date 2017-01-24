@@ -12,7 +12,8 @@ Imports: quantmod,
   selectr,
   XML,
   rvest,
-  lubridate
+  lubridate,
+  stringr
 Depends:
     R (>= 3.0.1)
 License: What license is it under?
