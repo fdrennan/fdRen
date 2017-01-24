@@ -1018,3 +1018,18 @@ limit_info <- select(limit_info, resource, prop)
 limit_info <- arrange(limit_info, prop)
 limit_info
 }
+
+#' See my book when available
+#' @description
+#' Extracts hastages from twitteR dataframe.
+#' @examples
+#' addHastags(tweets)
+#' @export
+
+addHashtags <- function(tweetDF) {
+     tweetDF$hastags <- str_extract_all(tweetDF$text, "#[:graph:]+ ")
+     tweetDF$hastags <- str_replace_all(tweetDF$hastags, "[:punct:]", "")
+     tweetDF$hastags <- tolower(tweetDF$hastags)
+     tweetDF$hastags <- ifelse(tweetDF$hastags == "character0", NA, tweetDF$hastags)
+     tweetDF
+}
