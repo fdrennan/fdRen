@@ -972,3 +972,16 @@ sampler <- function(theData, proportion = "proportation like .9") {
   returnList[["test"]] <- test
   returnList
 }
+
+
+#' companyTicker
+#' @description
+#' Searches marketwatch.com to find a ticker given a query
+#' @examples
+#' companyTicker("Tesla")
+#' @export
+
+companyTicker <- function(query) {
+    lookup <-  paste0("http://www.marketwatch.com/tools/quotes/lookup.asp?siteID=mktw&Lookup=", query, "&Country=us&Type=All")
+    urlTables(lookup)[[1]]
+}

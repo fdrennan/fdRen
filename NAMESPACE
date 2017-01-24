@@ -3,6 +3,7 @@
 export(binomConfint)
 export(bondTable)
 export(coinPlot)
+export(companyTicker)
 export(completest.cases)
 export(curve_fitter)
 export(d_beta)
