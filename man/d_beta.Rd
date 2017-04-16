@@ -20,4 +20,3 @@ Stock beta generator
 \examples{
 d_beta("AAPL", "SPY")
 }
-

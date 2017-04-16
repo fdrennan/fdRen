@@ -12,4 +12,3 @@ returns current treasury bills and notes
 \examples{
 bondtable()
 }
-

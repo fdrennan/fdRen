@@ -12,4 +12,3 @@ TicTacToe
 \examples{
 tictactoe()
 }
-

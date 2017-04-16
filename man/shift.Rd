@@ -16,4 +16,3 @@ shift
 \examples{
 shift(1:10, 1)
 }
-

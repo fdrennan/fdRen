@@ -14,4 +14,3 @@ testTrain <- sampler(iris, .9)
 testTrain$test
 testTrain$train
 }
-

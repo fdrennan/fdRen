@@ -17,4 +17,3 @@ Expands columns with categorical variables into ones and zeroes
 \examples{
 expandNum(animals, c(4,5,6,7))
 }
-

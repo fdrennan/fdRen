@@ -21,4 +21,3 @@ coinPlot(1000)
 \author{
 swirl.com
 }
-

@@ -24,4 +24,3 @@ sh  <- stockQuoteBig("SH", 2010)
 spy  <- stockQuoteBig("SPY", 2010)
 cor(spy$byMonth$Percent.Change[1:80], sh$byMonth$Percent.Change[1:80])
 }
-

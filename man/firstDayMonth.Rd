@@ -15,4 +15,3 @@ Returns the first date of each month in list of dates
 \examples{
 
 }
-

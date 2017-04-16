@@ -15,4 +15,3 @@ Gets stock data that you might want
 \examples{
 AAPL <- yahooFin("AAPL")
 }
-

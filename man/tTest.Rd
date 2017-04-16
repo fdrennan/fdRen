@@ -22,4 +22,3 @@ tTest(sampleStud, .95)
 \seealso{
 t.test(sampleStud)
 }
-

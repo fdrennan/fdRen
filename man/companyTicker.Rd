@@ -12,4 +12,3 @@ Searches marketwatch.com to find a ticker given a query
 \examples{
 companyTicker("Tesla")
 }
-

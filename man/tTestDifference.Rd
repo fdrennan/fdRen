@@ -15,4 +15,3 @@ diffTInv(g1, g2, .95)
 \seealso{
 t.test(difference)
 }
-

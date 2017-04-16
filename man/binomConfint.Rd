@@ -24,4 +24,3 @@ binomConfint(.6, 100, .95)
 \author{
 swirl.com
 }
-

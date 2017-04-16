@@ -12,4 +12,3 @@ Gives current usage when using twitteR package.
 \examples{
 twitteR_usage()
 }
-

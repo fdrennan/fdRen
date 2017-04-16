@@ -14,4 +14,3 @@ stDev = standard deviation (ONLY IF KNOWN)}
 \description{
 tStatistic
 }
-

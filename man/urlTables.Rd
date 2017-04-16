@@ -16,4 +16,3 @@ Downloads tables from url
 starTable <- urlTables("https://en.wikipedia.org/wiki/Star")
 # starTable[[3]]
 }
-

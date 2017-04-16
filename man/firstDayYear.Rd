@@ -15,4 +15,3 @@ Returns the first date of each year in list of dates
 \examples{
 
 }
-

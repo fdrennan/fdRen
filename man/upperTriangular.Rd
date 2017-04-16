@@ -23,4 +23,3 @@ Converts a matrix to upper triangular form
 
 upperTriangular(K)
 }
-

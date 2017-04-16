@@ -25,4 +25,3 @@ Takes in any data.frame and given input and assigns row weights. On the animals 
 # This might take a moment to run.
 forLoopAnimals <- sortit(animals, 4, "Euthanasia", c(5, 6, 7, 8, 9))
 }
-

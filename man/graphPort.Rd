@@ -13,4 +13,3 @@ Plots a portfolio of three stocks, must use stockData function
 stocks <- stockData(c("AAPL", "AKRX", "SPY"), 2009)
 graphPort(stock = stocks, rf = .005)
 }
-

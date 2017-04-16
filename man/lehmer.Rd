@@ -16,4 +16,3 @@ Lehmer
 \examples{
 lehmer(10)
 }
-

@@ -1038,3 +1038,17 @@ addHashtags <- function(tweetDF) {
      tweetDF$hashtags <- str_split(tweetDF$hashtags, " ")
      tweetDF
 }
+
+
+#' See my book when available
+#' @description
+#' Extracts hastages from twitteR dataframe.
+#' @examples
+#' addHastags(tweets)
+#' @export
+
+testFunc <- function() {
+  print("yay")
+}
+
+

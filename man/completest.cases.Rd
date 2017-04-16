@@ -14,4 +14,3 @@ returns rows without NAs
 stocks <- stockQuoteBig(c("AAPL"), 2012)
 aaplNoNA <- completest.cases(stocks$AAPL$byDay)
 }
-

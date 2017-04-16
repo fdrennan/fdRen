@@ -13,4 +13,3 @@ Returns data about selected stocks
 \examples{
 stock <- stockData(c("AAPL", "AKRX", "SPY"), 2009)
 }
-

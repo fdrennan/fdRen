@@ -24,4 +24,3 @@ for(i in 1:3) {
 meanplot(xy, c(1,2), sens = i)
 }
 }
-

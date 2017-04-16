@@ -15,4 +15,3 @@ Checks if a package is loaded
 \examples{
 packageLoaded("ggplot2")
 }
-

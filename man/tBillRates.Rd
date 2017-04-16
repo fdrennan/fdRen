@@ -12,4 +12,3 @@ Returns current T-Bill rates
 \examples{
 tRates <- tBillRates()
 }
-

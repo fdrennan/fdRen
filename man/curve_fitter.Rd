@@ -38,4 +38,3 @@ coeff <- curve_fitter(dataFrame = xy, "x, x^2, x^3", c(1, 2))
 curve(coeff[[1]] + coeff[[2]]*x + coeff[[3]]*x^2 + coeff[[4]]*x^3, add = TRUE)
 
 }
-
