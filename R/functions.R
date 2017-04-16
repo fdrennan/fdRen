@@ -1040,15 +1040,22 @@ addHashtags <- function(tweetDF) {
 }
 
 
-#' See my book when available
+#' Needed this
 #' @description
-#' Extracts hastages from twitteR dataframe.
+#' Upload to my website
 #' @examples
-#' addHastags(tweets)
+#' uploadData(iris)
 #' @export
 
-testFunc <- function() {
-  print("yay")
+uploadData = function(data) {
+write.csv(data, paste0(deparse(substitute(data)), ".csv"))
+library(RCurl)
+pwd = readline("Enter Password:\n")
+ftpUpload(paste0(getwd(), "/", deparse(substitute(data)), ".csv"),
+paste0("ftp://fdrennan.net/public_html/pages/pages2/datasets/", paste0(deparse(substitute(data)), ".csv")),
+    userpwd=paste0(pwd))
+
+print(paste0("fdrennan.net/pages/pages2/datasets/", paste0(deparse(substitute(data)), ".csv")))
 }
 
 
