@@ -1059,3 +1059,24 @@ print(paste0("fdrennan.net/pages/pages2/datasets/", paste0(deparse(substitute(da
 }
 
 
+#' Needed this
+#' @description
+#' Upload to my website
+#' @examples
+#' uploadPage("randomForests")
+#' @export
+
+
+uploadPage = function(pagename) {
+library(RCurl)
+
+pageLoc = paste0(getwd(),"/", pagename, ".html")
+
+pwd = readline("Enter Password:\n")
+ftpUpload(pageLoc,paste0("ftp://www.fdrennan.net/public_html/pages/pages2/", paste0(pagename), ".html"), userpwd=paste0(pwd))
+
+print(paste0("http://www.fdrennan.net/pages/pages2/", paste0(pagename), ".html"))
+}
+
+
+
