@@ -1100,3 +1100,20 @@ getCompany = function(ticker = "AAPL", type = "BS", period = 'Q') {
      data = data[rowSums(t(apply(data, 1, is.na))) < ncol(data),]
      data
 }
+
+
+#' getStockMeta
+#' @param ticker = Company ticker
+#' @examples
+#' getStockMeta("AAPL")
+#' @export
+#'
+#'
+
+getStockMeta = function(tickers) {
+     library(data.table)
+     nasdaq = fread("http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=NASDAQ&render=download")
+     nyse = fread("http://www.nasdaq.com/screening/companies-by-industry.aspx?exchange=NYSE&render=download")
+     stockInfo = rbind(nyse, nasdaq)
+     subset(stockInfo, Symbol %in% tickers)
+}
