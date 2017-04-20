@@ -1090,11 +1090,11 @@ print(paste0("http://www.fdrennan.net/pages/pages2/", paste0(pagename), ".html")
 #'
 
 getCompany = function(ticker = "AAPL", type = "BS", period = 'Q') {
-     data = getFinancials(ticker,
-                          auto.assign = FALSE)
-     data = viewFinancials(data,
+     data = invisible(getFinancials(ticker,
+                          auto.assign = FALSE, silent =TRUE))
+     data = invisible(viewFinancials(data,
                          type=c(type),
-                         period = period)
+                         period = period))
 
      # To keep rows which contain ALL NA.
      data = data[rowSums(t(apply(data, 1, is.na))) < ncol(data),]
