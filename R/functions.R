@@ -1079,4 +1079,24 @@ print(paste0("http://www.fdrennan.net/pages/pages2/", paste0(pagename), ".html")
 }
 
 
+#' getCompany
+#' @param ticker = Company ticker
+#' @param type = c("BS", "IS", "CF")
+#' @param period = c("A", "Q")
+#' @examples
+#' getCompany("AAPL", "BS", "A")
+#' @export
+#'
+#'
 
+getCompany = function(ticker = "AAPL", type = "BS", period = 'Q') {
+     data = getFinancials(ticker,
+                          auto.assign = FALSE)
+     data = viewFinancials(data,
+                         type=c(type),
+                         period = period)
+
+     # To keep rows which contain ALL NA.
+     data = data[rowSums(t(apply(data, 1, is.na))) < ncol(data),]
+     data
+}
