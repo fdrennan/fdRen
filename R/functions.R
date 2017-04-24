@@ -1119,7 +1119,7 @@ getStockMeta = function(tickers) {
 }
 
 #' testWindows
-#' @param none
+#' @param none = Comp
 #' @examples
 #' getStockMeta("AAPL")
 #' @export
