@@ -1117,3 +1117,15 @@ getStockMeta = function(tickers) {
      stockInfo = rbind(nyse, nasdaq)
      subset(stockInfo, Symbol %in% tickers)
 }
+
+#' testWindows
+#' @param none
+#' @examples
+#' getStockMeta("AAPL")
+#' @export
+#'
+#'
+
+testWindows = function() {
+  print("worked")
+}
