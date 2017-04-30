@@ -1048,7 +1048,7 @@ addHashtags <- function(tweetDF) {
 #' @export
 
 uploadData = function(data) {
-write.csv(data, paste0(deparse(substitute(data)), ".csv"))
+write.csv(data, paste0(deparse(substitute(data)), ".csv"), row.names = FALSE)
 library(RCurl)
 pwd = readline("Enter Password:\n")
 ftpUpload(paste0(getwd(), "/", deparse(substitute(data)), ".csv"),
@@ -1118,14 +1118,4 @@ getStockMeta = function(tickers) {
      subset(stockInfo, Symbol %in% tickers)
 }
 
-#' testWindows
-#' @param none = Comp
-#' @examples
-#' getStockMeta("AAPL")
-#' @export
-#'
-#'
 
-testWindows = function() {
-  print("worked")
-}
