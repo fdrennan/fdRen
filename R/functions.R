@@ -1119,3 +1119,26 @@ getStockMeta = function(tickers) {
 }
 
 
+#' splitClass
+#' @param dataset = a datset
+#' @examples
+#' splitClass(iris)
+#' @export
+#'
+
+splitClass = function(dataset) {
+
+  # Splitting data into numeric and factor columns.
+  #################################################
+  classes = dataset %>%
+    sapply(class)
+
+  numericCols = names(classes[classes != "factor"])
+  originalNumeric = dataset[numericCols]
+  originalFactor = dataset[colnames(dataset) != numericCols]
+  returnList = list(num = originalNumeric, fac = originalFactor)
+  returnList
+
+
+}
+
