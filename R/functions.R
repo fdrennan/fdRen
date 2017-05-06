@@ -1144,3 +1144,13 @@ splitClass = function(dataset) {
 
 }
 
+#' Downloads my page templates
+#' @param none
+#' @examples
+#' template()
+#' @export
+#'
+
+template = function() {
+  download.file("http://fdrennan.net/Documents/template.txt", "template.Rmd")
+}
