@@ -1068,14 +1068,16 @@ print(paste0("fdrennan.net/pages/pages2/datasets/", paste0(deparse(substitute(da
 
 
 uploadPage = function(pagename) {
-library(RCurl)
+  library(RCurl)
 
-pageLoc = paste0(getwd(),"/", pagename, ".html")
+  pageLoc = paste0(getwd(),"/", pagename, ".html")
 
-pwd = readline("Enter Password:\n")
-ftpUpload(pageLoc,paste0("ftp://www.fdrennan.net/public_html/pages/pages2/", paste0(pagename), ".html"), userpwd=paste0(pwd))
+  pwd = readline("Enter Password:\n")
+  ftpUpload(pageLoc,paste0("ftp://www.fdrennan.net/public_html/pages/pages2/", paste0(pagename), ".html"), userpwd=paste0(pwd))
+  ftpUpload(pageLoc,paste0("ftp://www.fdrennan.net/public_html/pages/pages2/rmd/", paste0(pagename), ".Rmd"), userpwd=paste0(pwd))
 
-print(paste0("http://www.fdrennan.net/pages/pages2/", paste0(pagename), ".html"))
+  print(paste0("http://www.fdrennan.net/pages/pages2/", paste0(pagename), ".html"))
+  print(paste0("ftp://www.fdrennan.net/public_html/pages/pages2/rmd/", paste0(pagename), ".Rmd"))
 }
 
 
